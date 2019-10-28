@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      enabled: true
+  application:
+    name: licensingservice
+  profiles:
+    active: dev
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
