@@ -10,8 +10,7 @@ import org.springframework.http.client.ClientHttpResponse;
 
 import java.io.IOException;
 
-public class UserContextInterceptor{
-        /*implements ClientHttpRequestInterceptor {
+public class UserContextInterceptor implements ClientHttpRequestInterceptor {
     private static final Logger logger = LoggerFactory.getLogger(UserContextInterceptor.class);
     @Override
     public ClientHttpResponse intercept(
@@ -23,5 +22,5 @@ public class UserContextInterceptor{
         headers.add(UserContext.AUTH_TOKEN, UserContextHolder.getContext().getAuthToken());
 
         return execution.execute(request, body);
-    }*/
+    }
 }
